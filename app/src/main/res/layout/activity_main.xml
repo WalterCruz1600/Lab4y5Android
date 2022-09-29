@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/blancoGris"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView_MainActivity_Domingo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Domingo"
+        android:textSize="35sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/celestePalido"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/IconoUpdate_LinearLayout_MainActivity"
+            android:layout_width="63dp"
+            android:layout_height="66dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            app:srcCompat="@drawable/icono_update_blanco" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="15dp"
+            android:text="Actualización disponibe" />
+
+        <Button
+            android:id="@+id/button_MainActivity_Descargar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="15dp"
+            android:backgroundTint="@color/transparente"
+            android:text="Descargar"
+            android:textColor="@color/teal_700"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="19 de Junio"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_MainActivity_Domingo" />
+
+    <Button
+        android:id="@+id/button_MainActivity_Terminar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FFFFFF"
+        android:text="terminar Jornada"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:textColor="#673AB7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView_MainActivity_Domingo" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="25dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+        <Button
+            android:id="@+id/button_MainActivity_Iniciar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/orange"
+            android:text="Iniciar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/button_MainActivity_Detalles"
+            android:layout_marginStart="15dp"
+            android:layout_marginBottom="5dp"
+            app:layout_constraintTop_toBottomOf="@id/textView_MainActivity_Horario" />
+
+        <TextView
+            android:id="@+id/textView_MainActivity_Restaurante"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="25dp"
+            android:text="Lai Lai"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@id/textView_MainActivity_Direccion"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView_MainActivity_Direccion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12 Calle 5-27, zona 9 Capital"
+            tools:layout_editor_absoluteX="20dp"
+            tools:layout_editor_absoluteY="76dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView_MainActivity_Restaurante"
+            app:layout_constraintBottom_toTopOf="@id/textView_MainActivity_Horario"
+            android:layout_marginBottom="15dp"
+            android:layout_marginStart="20dp"/>
+
+        <TextView
+            android:id="@+id/textView_MainActivity_Horario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="10:00 AM - 9:00 PM"
+            app:layout_constraintBottom_toTopOf="@id/button_MainActivity_Iniciar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_MainActivity_Direccion" />
+
+        <Button
+            android:id="@+id/button_MainActivity_Detalles"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Detalles"
+            tools:layout_editor_absoluteX="236dp"
+            app:layout_constraintStart_toEndOf="@id/button_MainActivity_Iniciar"
+            app:layout_constraintTop_toBottomOf="@id/textView_MainActivity_Horario"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:backgroundTint="@color/blancoGris"
+            android:textColor="@color/orange"
+            android:layout_margin="5dp"
+            tools:layout_editor_absoluteY="121dp" />
+
+        <ImageButton
+            android:id="@+id/imageButtonMainActivity_Directions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/icon_directions_morado"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="3dp"
+            android:layout_marginTop="3dp"
+            android:backgroundTint="@color/white"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

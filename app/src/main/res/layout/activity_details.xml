@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailsActivity">
+
+    <TextView
+        android:id="@+id/textView_DetailsActivty_Restaurante"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="40dp"
+        android:text="Lai Lai"
+        android:textSize="40sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/textView_DetailsActivty_Direccion"/>
+
+    <TextView
+        android:id="@+id/textView_DetailsActivty_Direccion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12 Calle 5-27, zona 9 Capital"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@id/buttonCamara_DetailsActivity_Camara"
+        app:layout_constraintStart_toStartOf="@id/textView_DetailsActivty_Restaurante"
+        app:layout_constraintTop_toBottomOf="@+id/textView_DetailsActivty_Restaurante" />
+
+    <Button
+        android:id="@+id/buttonCamara_DetailsActivity_Camara"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Iniciar Visita"
+        android:backgroundTint="@color/orange"
+        app:layout_constraintTop_toBottomOf="@id/textView_DetailsActivty_Direccion"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"/>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/Gris"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteY="144dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonCamara_DetailsActivity_Camara"
+        app:layout_constraintBottom_toTopOf="@id/Constrint_DetailsActivity_2"></LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Constrint_DetailsActivity_2"
+        android:layout_width="match_parent"
+        android:layout_height="276dp"
+        tools:layout_editor_absoluteX="-55dp"
+        tools:layout_editor_absoluteY="475dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout2">
+
+        <TextView
+            android:id="@+id/textView_DetailsActivity_Infor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Información General"
+            android:textSize="25sp"
+            tools:layout_editor_absoluteX="41dp"
+            tools:layout_editor_absoluteY="32dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="25dp"
+            app:layout_constraintBottom_toTopOf="@id/textView_DetailsActivity_Horario1"/>
+
+        <TextView
+            android:id="@+id/textView_DetailsActivity_Horario1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Horario de atención"
+            android:textSize="20sp"
+            tools:layout_editor_absoluteX="46dp"
+            tools:layout_editor_absoluteY="85dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/textView_DetailsActivity_Infor"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="40dp"
+            app:layout_constraintBottom_toTopOf="@id/textView_DetailsActivity_Horario2"/>
+
+        <TextView
+            android:id="@+id/textView_DetailsActivity_Horario2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10:00 AM - 9:00 PM"
+            tools:layout_editor_absoluteX="46dp"
+            tools:layout_editor_absoluteY="109dp"
+            app:layout_constraintTop_toBottomOf="@id/textView_DetailsActivity_Horario1"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="40dp"
+            app:layout_constraintBottom_toTopOf="@id/textView_DetailsActivity_Llamadas1"/>
+
+        <TextView
+            android:id="@+id/textView_DetailsActivity_Llamadas1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Teléfono"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/textView_DetailsActivity_Horario2"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="40dp" />
+
+        <TextView
+            android:id="@+id/textView_DetailsActivity_Llamadas2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" 2301 1000"
+            tools:layout_editor_absoluteX="46dp"
+            tools:layout_editor_absoluteY="109dp"
+            app:layout_constraintTop_toBottomOf="@id/textView_DetailsActivity_Llamadas1"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="40dp"/>
+
+        <Button
+            android:id="@+id/button_DetailsActivity_llamar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LLAMAR"
+            android:backgroundTint="@color/transparente"
+            android:textColor="@color/celestePalido"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/textView_DetailsActivity_Llamadas1"
+            android:layout_marginEnd="20dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
